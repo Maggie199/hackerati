@@ -2,7 +2,9 @@
 	var bP={};	
 	var b=30, bb=150, height=600, buffMargin=1, minHeight=14;
 	var c1=[-130, 40], c2=[-50, 150], c3=[-10, 190]; //Column positions of labels.
-	var colors = d3.scale.category20().range();
+	var color1 = d3.scale.category20().range();
+	var color2 = d3.scale.category10().range();
+	var colors = color1.concat(color2);
 	
 	bP.partData = function(data,p){
 		var sData={};
@@ -253,10 +255,10 @@
 			var selectedBar = d3.select("#"+k.id).select(".part"+m).select(".mainbars")
 				.selectAll(".mainbar").filter(function(d,i){ return (i==s);});
 			
-			selectedBar.select(".mainrect").style("stroke-opacity",1).style("fill","#DA430A");			
-			selectedBar.select(".barlabel").style('font-weight','bold').style("fill","#DA430A");
-			selectedBar.select(".barvalue").style('font-weight','bold').style("fill","#DA430A");
-			selectedBar.select(".barpercent").style('font-weight','bold').style("fill","#DA430A");
+			selectedBar.select(".mainrect").style("stroke-opacity",1).style("fill","#166BC0");			
+			selectedBar.select(".barlabel").style('font-size',14).style("fill","#166BC0");
+			selectedBar.select(".barvalue").style('font-size',14).style("fill","#166BC0");
+			selectedBar.select(".barpercent").style('font-size',14).style("fill","#166BC0");
 		});
 	}	
 	
@@ -268,9 +270,9 @@
 				.selectAll(".mainbar").filter(function(d,i){ return (i==s);});
 			
 			selectedBar.select(".mainrect").style("stroke-opacity",0).style("fill","#DA430A");			
-			selectedBar.select(".barlabel").style('font-weight','normal').style("fill","#DA430A");
-			selectedBar.select(".barvalue").style('font-weight','normal').style("fill","#DA430A");
-			selectedBar.select(".barpercent").style('font-weight','normal').style("fill","#DA430A");
+			selectedBar.select(".barlabel").style('font-size',12).style("fill","#DA430A");
+			selectedBar.select(".barvalue").style('font-size',12).style("fill","#DA430A");
+			selectedBar.select(".barpercent").style('font-size',12).style("fill","#DA430A");
 		});		
 	}
 	
