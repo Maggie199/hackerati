@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Skills of Hackerati</title>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet" media="screen">
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="biPartite.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Denk+One|Permanent+Marker|Gochi+Hand|Schoolbell|Walter+Turncoat|Gloria+Hallelujah|Exo|Indie+Flower|Chewy|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="intro">
+			<h1> Our Team</h1>
+			<ul>
+				<li>We are all hackers in our own disciplines: inventors who naturally defy conventional wisdom to build awesome stuff. We particularly look for hackers with entrepreneurship in their DNA. Hackerati are visionary, unconventional creators and explorers who are driven by passion to improve the world around them.</li>
+				<li><i class="fa fa-heartbeat"></i> We are doers and dreamers.</li>
+				<li><i class="fa fa-graduation-cap"></i>We are students and teachers.</li>
+				<li><i class="fa fa-paint-brush"></i> We are scientists and artists.</li>
+				<li><i class="fa fa-spinner fa-spin"></i> We are The Hackerati.</li>
+			</ul>
+		</div>
+		<script>
+			var skills_data=[
+			['Geoff','Python',1],
+			['Rob','Python',1],
+			['Bobby','Python',1],
+			['Derek','Python',1],
+			['Ethan','Python',1],
+			['Michael.A','Python',1],
+			['Nenad','Python',1],
+			['Ramon','Python',1],
+			['Geoff','Django',1],
+			['Derek','Django',1],
+			['Ethan','Django',1],
+			['Geoff','Node.js',1],
+			['Rob','Node.js',1],
+			['Harrison','Node.js',1],
+			['Geoff','Scala',1],
+			['Alex','Scala',1],
+			['Kevin','Scala',1],
+			['Rob','Java',1],
+			['Harrison','Java',1],
+			['Kevin','Java',1],
+			['Michael.A','Java',1],
+			['Nenad','Java',1],
+			['Ramon','Java',1],
+			['Zelimir','Java',1],
+			['Rob','Hadoop',1],
+			['Michael.A','Hadoop',1],
+			['Alex','JavaScript',1],
+			['Bobby','JavaScript',1],
+			['Derek','JavaScript',1],
+			['Ethan','JavaScript',1],
+			['Harrison','JavaScript',1],
+			['Kevin','JavaScript',1],
+			['Nenad','JavaScript',1],
+			['Ramon','JavaScript',1],
+			['Alex','iOS',1],
+			['Susie','iOS',1],
+			['Derek','iOS',1],
+			['Grace','iOS',1],
+			['Vivian','iOS',1],
+			['Alex','Media',1],
+			['Patrick','Media',1],
+			['Bobby','MATLAB',1],
+			['Derek','MATLAB',1],
+			['Ethan','MATLAB',1],
+			['Ethan','Web Development',1],
+			['Bobby','Web Development',1],
+			['Derek','Web Development',1],
+			['Nenad','Web Development',1],
+			['Susie','Web Development',1],
+			['Geoff','Entrepreneurship',1],
+			['Rob','Entrepreneurship',1],
+			['Derby','Entrepreneurship',1],
+			['Donny','Entrepreneurship',1],
+			['Michael.K','Entrepreneurship',1],
+			['Derek','C++',1],
+			['Ethan','C++',1],
+			['Harrison','C++',1],
+			['Michael.A','C++',1],
+			['Ramon','C++',1],
+			['Derek','C',1],
+			['Harrison','C',1],
+			['Ramon','C',1],
+			['Derek','jQuery',1],
+			['Nenad','jQuery',1],
+			['Igor','Android',1],
+			['Michael.A','Android',1],
+			['Patrick','Android',1],
+			['Michael.A','Ruby',1],
+			['Zelimir','Ruby',1]
+			];
+
+			var height = 610, margin ={b:0, t:40, l:250, r:50};
+
+			var svg = d3.select("body")
+				.append("svg").attr('width','50%').attr('height',(height+margin.b+margin.t)).attr('float','left').attr('display', 'block')
+				.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
+
+			var data = [ 
+				{data:bP.partData(skills_data,2), id:'skills', header:["Name","Skill", "Skills"]}
+			];
+
+			bP.draw(data, svg);
+
+			if (document.documentElement.clientWidth < 900) {
+				svg.attr('float','none');
+			}
+		</script>
+	</body>
+</html>
