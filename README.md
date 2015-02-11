@@ -1,5 +1,6 @@
 Team Skills page designed for Hackerati
 ==================
+
 In this project, an interactive bigraph was drawn with D3.js.  This bipartite graph gives us insights into what the Hackerati is good at, which fields we may need hire new people in, and also how people share similar skills with each other.
 
 Author: Maggie Nan
