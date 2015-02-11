@@ -1,0 +1,42 @@
+body{
+	margin-left:auto;
+	margin-right:auto;
+	background-color: rgba(0, 0, 0, 1);
+	background-image: url(hackworld_Fotor.jpg);
+	background-position: left;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+svg text{
+	font-size:12px;
+	font-family: 'Exo', sans-serif;
+}
+.skills {
+	float: left;
+}
+img{
+	width:80%;
+	left:auto;
+	right:auto;
+}
+h1{
+	text-align: center;
+	padding-top: 280px;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	padding-top: 10px;
+}
+#intro{
+	display: block;
+	width: 40%;
+	font-family: 'Schoolbell', cursive;
+	color: white;
+	float: left;
+
+}
+rect{
+	shape-rendering:crispEdges;
+}
