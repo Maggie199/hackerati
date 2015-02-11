@@ -12,6 +12,6 @@ In data directory, you will see:
 
 How to run it
 
-1. Open the webpage at: http://www.zhenan.co/javascript/hacker.html on any browser
+1. Open the webpage at: http://www.zhenan.co/javascript/hacker.html in any browser
 2. Hover each team member's name to see his/her skill sets
 3. Hover each skill to see the people with this skill
